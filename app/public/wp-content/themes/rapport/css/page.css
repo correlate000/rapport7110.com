@@ -1,0 +1,131 @@
+@charset "utf-8";
+.wrap { padding-top: 100px; background: #fff url('/img/bg-page.jpg') no-repeat 50% 0;}
+@media (max-width: 801px) {
+	.wrap { padding-top: 60px;}
+}
+
+.page-kv { padding: 40px 0 0; text-align: center;}
+.page-kv:after { content: ''; display: block; width: 80px; height: 18px; margin: 0 auto; background: url('/img/ttl-mark.png') no-repeat 50% 50% / auto 100%;}
+.page-kv h2 { margin-bottom: 18px; font-weight: 700; line-height: 1; text-align: center;}
+.page-kv h2 img { width: 60%; max-width: 150px;}
+@media (max-width: 481px) {
+	.page-kv:after { height: 12px;}
+	.page-kv h2 { margin-bottom: 12px;}
+}
+
+.page-ctn { width: 92%; margin: 0 auto; padding: 40px 0 200px;}
+@media (max-width: 801px) {
+	.page-ctn { padding: 20px 0 120px;}
+}
+@media (max-width: 481px) {
+	.page-ctn { width: 88%; padding: 20px 0 60px;}
+}
+
+
+.news-list { width: 100%; max-width: 900px; min-height: 400px; margin: 0 auto 30px;}
+.news-list ul { border-top: dotted 1px #000;}
+.news-list ul li { position: relative; padding: 10px; padding-left: 120px; border-bottom: dotted 1px #000; font-size: 16px; font-weight: 700;}
+.news-list ul li time { position: absolute; left: 8px; top: 10px;}
+.news-list ul li a { color: #000; text-decoration: none;}
+.news-list ul li a:hover { color: #4484ce;}
+@media (max-width: 481px) {
+	.news-list ul li { padding: 10px 5px; font-size: 13px; font-weight: 400;}
+	.news-list ul li time { position: relative; left: auto; top: auto; display: block; width: 100%;}
+}
+
+
+.page-ctn article { width: 100%; max-width: 900px; min-height: 400px; margin: 0 auto 30px; padding-bottom: 30px; border-bottom: dotted 1px #000;}
+.article-title { margin-bottom: 20px; padding-bottom: 18px; border-bottom: dotted 1px #000;}
+.article-title h2 { margin-bottom: 10px; font-size: 25px; font-weight: 700; line-height: 1.4;}
+.article-title p { color: #787878;}
+.article-ctn h3 { position: relative; margin-bottom: 8px; padding-left: 25px; font-size: 22px; font-weight: 700;}
+.article-ctn h3:after { content: ''; display: block; width: 16px; height: 16px;
+ background: url('/img/ttl-mark.png') no-repeat 50% 50% / auto 100%;
+ position: absolute; left: 0; top: 0.5em;
+}
+.article-ctn p { font-weight: 700;}
+.article-ctn figure { padding: 40px 0; text-align: center;}
+.article-ctn figure img { max-width: 100%;}
+@media (max-width: 801px) {
+	.article-title h2 { margin-bottom: 6px; font-size: 3.0vw;}
+	.article-title p { font-size: 14px;}
+	.article-ctn p { font-size: 14px;}
+}
+@media (max-width: 481px) {
+	.page-ctn article { margin-bottom: 20px; padding-bottom: 20px;}
+	.article-title { margin-bottom: 12px; padding-bottom: 10px;}
+	.article-title h2 { margin-bottom: 5px; font-size: 16px;}
+	.article-title p { font-size: 12px;}
+	.article-ctn h3 { padding-left: 20px; font-size: 18px;}
+	.article-ctn h3:after { width: 12px; height: 12px;}
+	.article-ctn p { font-size: 13px; font-weight: 400;}
+	.article-ctn figure { padding: 20px 0;}
+}
+
+
+.pager { width: 92%; margin: 0 auto;}
+.pager .inner { position: relative; width: 100%; max-width: 900px; margin: 0 auto; padding: 0 60px;}
+.pager .prev,
+.pager .next { width: 60px; position: absolute; top: 50%; transform: translateY(-50%);}
+.pager .prev { left: 0;}
+.pager .next { right: 0;}
+.pager .prev a,
+.pager .next a { position: relative; display: block; color: #000; font-size: 16px; font-weight: 700; text-decoration: none;}
+.pager .prev a { padding-left: 24px;}
+.pager .next a { padding-right: 24px;}
+.pager .prev a:before,
+.pager .next a:after { content: ''; display: block; width: 0px; height: 0px; border: solid 7px transparent;
+ position: absolute; top: 50%; transform: translateY(-50%);
+}
+.pager .prev a:before{ border-right: solid 12px #4484ce; border-left: 0; left: 0;}
+.pager .next a:after { border-left: solid 12px #4484ce; border-right: 0; right: 0;}
+.pager .prev a:hover,
+.pager .next a:hover { color: #4484ce;}
+.pager ul { font-size: 0; text-align: center;}
+.pager ul li { display: inline-block; padding: 4px; font-size: 16px;}
+.pager ul li span,
+.pager ul li a { display: block; width: 26px; height: 26px; border-radius: 50%; font-weight: 700;}
+.pager ul li span { background: #4484ce; color: #fff;}
+.pager ul li a { background: #c4d7ec; color: #000; text-decoration: none;}
+.pager ul li a:hover { background: #4484ce; color: #fff;}
+.pager .back { width: 100%; max-width: 150px; margin: 0 auto;}
+.pager .back a { display: block; padding: 10px 0; background: #4484ce; border-radius: 50px;
+ color: #fff; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none;
+}
+.pager .back a:hover { opacity: 0.8;}
+@media (max-width: 1001px) {
+}
+@media (max-width: 481px) {
+	.pager .prev,
+	.pager .next { width: 45px;}
+	.pager .prev a,
+	.pager .next a { font-size: 13px;}
+	.pager .prev a { padding-left: 16px;}
+	.pager .next a { padding-right: 16px;}
+	.pager .prev a:before,
+	.pager .next a:after { border: solid 5px transparent;}
+	.pager .prev a:before{ border-right: solid 8px #4484ce; border-left: 0;}
+	.pager .next a:after { border-left: solid 8px #4484ce; border-right: 0;}
+	.pager .back a { padding: 6px; font-size: 13px;}
+}
+
+
+
+.privacy-title { margin-bottom: 20px; padding-bottom: 18px; border-bottom: dotted 1px #000;}
+.privacy-title h2 { margin-bottom: 10px; font-size: 25px; font-weight: 700; line-height: 1.4; text-align: center;}
+.privacy-ctn { margin-bottom: 50px;}
+.privacy-ctn ul li { margin-bottom: 30px;}
+.privacy-ctn ul li dl dt { position: relative; margin-bottom: 8px; padding-left: 25px; font-size: 20px; font-weight: 700;}
+.privacy-ctn ul li dl dt:after { content: ''; display: block; width: 16px; height: 16px;
+ background: url('/img/ttl-mark.png') no-repeat 50% 50% / auto 100%;
+ position: absolute; left: 0; top: 0.5em;
+}
+.privacy-ctn p { font-weight: 700;}
+@media (max-width: 481px) {
+	.privacy-title { margin-bottom: 15px; padding-bottom: 12px;}
+	.privacy-title h2 { font-size: 18px;}
+	.privacy-ctn ul li dl dt { padding-left: 20px; font-size: 15px;}
+	.privacy-ctn ul li dl dt:after { width: 12px; height: 12px;}
+	.privacy-ctn ul li dl dd { font-size: 12px;}
+	.privacy-ctn p { font-size: 13px;}
+}

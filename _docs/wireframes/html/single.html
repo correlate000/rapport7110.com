@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事詳細 - バーベナ WF</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .wf-article {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .wf-article-header {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .wf-article-date {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .wf-article-title {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+    .wf-article-content {
+      font-size: 15px;
+      line-height: 2;
+    }
+    .wf-article-content p {
+      margin-bottom: 1.5em;
+    }
+    .wf-article-content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+    .wf-article-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    .wf-article-nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .wf-article-nav a:hover {
+      text-decoration: underline;
+    }
+    .wf-back-to-list {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wf-container">
+
+  <!-- Header -->
+  <header class="wf-header">
+    <div class="wf-logo">LOGO</div>
+    <nav class="wf-nav">
+      <ul>
+        <li><a href="top.html">TOP</a></li>
+        <li><a href="work.html">お仕事内容</a></li>
+        <li><a href="guide.html">ご利用案内</a></li>
+        <li><a href="staff.html">スタッフ紹介</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="wf-page-header">
+    <h1 class="wf-page-title">お知らせ</h1>
+  </div>
+
+  <!-- 記事詳細 -->
+  <section class="wf-section">
+    <article class="wf-article">
+
+      <header class="wf-article-header">
+        <p class="wf-article-date">2024.12.01</p>
+        <h2 class="wf-article-title">お知らせのタイトルが入ります。お知らせのタイトルが入ります。</h2>
+      </header>
+
+      <div class="wf-article-content">
+        <p>
+          いつもバーベナをご利用いただきありがとうございます。年末年始の営業についてお知らせいたします。
+        </p>
+
+        <div class="wf-placeholder" style="height: 300px; margin: 30px 0;">
+          <img src="img/news-sample.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+          記事内画像
+        </div>
+
+        <p>
+          <strong>年末年始休業期間</strong><br>
+          2024年12月28日（土）〜 2025年1月5日（日）
+        </p>
+
+        <p>
+          休業期間中のお問い合わせについては、1月6日（月）以降に順次対応いたします。ご不便をおかけいたしますが、何卒ご了承ください。
+        </p>
+      </div>
+
+      <!-- 前後の記事ナビ -->
+      <nav class="wf-article-nav">
+        <a href="#">← 前の記事</a>
+        <a href="#">次の記事 →</a>
+      </nav>
+
+    </article>
+
+    <!-- 一覧に戻る -->
+    <div class="wf-back-to-list">
+      <a href="news.html" class="wf-btn">お知らせ一覧へ戻る</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="wf-footer">
+    <nav class="wf-footer-nav">
+      <a href="top.html">TOP</a>
+      <a href="work.html">お仕事内容</a>
+      <a href="guide.html">ご利用案内</a>
+      <a href="staff.html">スタッフ紹介</a>
+      <a href="news.html">お知らせ</a>
+      <a href="recruit.html">採用情報</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="wf-copyright">© バーベナ All Rights Reserved.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

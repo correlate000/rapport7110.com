@@ -1,0 +1,47 @@
+# WordPress Core
+app/public/wp-admin/
+app/public/wp-includes/
+app/public/*.php
+app/public/*.txt
+app/public/*.html
+app/public/.htaccess
+!app/public/wp-content/
+
+# WordPress wp-content (keep only rapport theme)
+app/public/wp-content/plugins/
+app/public/wp-content/uploads/
+app/public/wp-content/upgrade/
+app/public/wp-content/languages/
+app/public/wp-content/ai1wm-backups/
+app/public/wp-content/themes/twentytwenty*/
+app/public/wp-content/themes/index.php
+app/public/wp-content/index.php
+
+# WordPress Config (contains credentials)
+app/public/wp-config.php
+app/public/wp-config-local.php
+
+# SQL dumps
+app/sql/
+
+# Logs
+logs/
+
+# Local / Server config
+conf/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (if any)
+node_modules/
+
+# Local WP specific
+app/public/local-xdebuginfo.php
