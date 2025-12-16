@@ -13,15 +13,22 @@
   <!-- Header -->
   <header class="wf-header">
     <a href="top.html" class="wf-logo">LOGO</a>
+    <button class="wf-hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="wf-nav">
       <ul>
         <li><a href="guide.html">ご利用案内</a></li>
         <li><a href="work.html">お仕事内容</a></li>
         <li><a href="staff.html">スタッフ紹介</a></li>
         <li><a href="news.html">お知らせ</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
+    <div class="wf-nav-overlay"></div>
   </header>
 
   <!-- Page Header -->
@@ -292,7 +299,7 @@
       <a href="work.html">お仕事内容</a>
       <a href="staff.html">スタッフ紹介</a>
       <a href="news.html">お知らせ</a>
-      <a href="recruit.html">採用情報</a>
+      <a href="faq.html">よくある質問</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <!-- SNSリンク -->
@@ -313,11 +320,42 @@
         </svg>
       </a>
     </div>
-    <p style="font-size: 11px; color: #888; margin-bottom: 10px;"><a href="privacy.html" style="color: #888;">プライバシーポリシー</a></p>
+    <p style="font-size: 11px; color: #888; margin-bottom: 10px;"><a href="recruit.html" style="color: #888;">採用情報</a> ｜ <a href="privacy.html" style="color: #888;">プライバシーポリシー</a></p>
     <p class="wf-copyright">Copyright (C) 2024 Rapport. All Rights Reserved.</p>
   </footer>
 
 </div>
+
+<script>
+// Hamburger Menu
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.wf-hamburger');
+  const nav = document.querySelector('.wf-nav');
+  const overlay = document.querySelector('.wf-nav-overlay');
+
+  if (hamburger && nav && overlay) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  }
+});
+</script>
 
 </body>
 </html>

@@ -26,6 +26,10 @@ body {
   align-items: center;
   padding: 15px 5%;
   border-bottom: 1px solid #ddd;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .wf-logo {
@@ -508,29 +512,322 @@ body {
   color: #f57c00;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ========================================
+   Hamburger Menu
+======================================== */
+.wf-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.wf-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.wf-hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.wf-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.wf-hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Nav Overlay */
+.wf-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.wf-nav-overlay.active {
+  display: block;
+}
+
+/* ========================================
+   Responsive - Tablet (768px - 1024px)
+======================================== */
+@media (max-width: 1024px) {
   .wf-feature-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .wf-card-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .wf-office {
-    grid-template-columns: 1fr;
+  .wf-nav ul {
+    gap: 10px;
   }
 
-  .wf-steps {
-    flex-direction: column;
+  .wf-nav a {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (max-width: 768px)
+======================================== */
+@media (max-width: 768px) {
+  /* Header */
+  .wf-header {
+    padding: 10px 5%;
   }
 
-  .wf-work-item {
-    grid-template-columns: 1fr;
+  .wf-logo {
+    width: 120px;
+    height: 35px;
+  }
+
+  .wf-hamburger {
+    display: flex;
   }
 
   .wf-nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  .wf-nav.active {
+    right: 0;
+  }
+
+  .wf-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+  }
+
+  .wf-nav a {
+    display: block;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    background: none;
+    font-size: 15px;
+  }
+
+  /* KV */
+  .wf-kv {
+    height: auto;
+    min-height: 300px;
+    padding: 40px 5%;
+  }
+
+  .wf-kv-text {
+    font-size: 18px;
+  }
+
+  /* Section */
+  .wf-section {
+    padding: 40px 5%;
+  }
+
+  .wf-section-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  /* Feature Grid */
+  .wf-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .wf-feature-item {
+    padding: 20px 10px;
+  }
+
+  .wf-feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Card Grid */
+  .wf-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Office */
+  .wf-office {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* Steps */
+  .wf-steps {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .wf-step {
+    padding: 20px 15px;
+  }
+
+  /* Work Item */
+  .wf-work-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wf-work-image {
+    height: 180px;
+  }
+
+  /* Staff Card (inline styles override) */
+  .wf-staff-card {
+    flex-direction: column !important;
+  }
+
+  .wf-staff-card .wf-placeholder {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  /* Top page inline cards */
+  .wf-work-cards > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Top page news section */
+  .wf-news-section {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .wf-news-section > div:first-child {
+    min-width: auto !important;
+  }
+
+  /* Access Steps */
+  .wf-access-steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wf-access-step-img {
+    height: 120px;
+  }
+
+  /* News */
+  .wf-news-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .wf-news-date {
+    min-width: auto;
+  }
+
+  /* FAQ */
+  .wf-faq-q {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .wf-faq-a {
+    padding: 12px 15px;
+    padding-left: 45px;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .wf-footer {
+    padding: 30px 5%;
+  }
+
+  .wf-footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wf-footer-nav a {
+    margin: 0;
+    padding: 8px 0;
+    display: block;
+  }
+
+  /* Page Header */
+  .wf-page-header {
+    padding: 40px 5%;
+  }
+
+  .wf-page-title {
+    font-size: 22px;
+  }
+
+  /* Button */
+  .wf-btn {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+
+  /* Timeline */
+  .wf-timeline {
+    padding-left: 20px;
+  }
+
+  .wf-timeline-item {
+    padding-left: 20px;
+  }
+}
+
+/* ========================================
+   Responsive - Small Mobile (max-width: 480px)
+======================================== */
+@media (max-width: 480px) {
+  .wf-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wf-kv-text {
+    font-size: 16px;
+  }
+
+  .wf-kv-sub {
+    font-size: 12px;
+  }
+
+  .wf-section-title {
+    font-size: 16px;
+  }
+
+  .wf-work-title {
+    font-size: 18px;
   }
 }

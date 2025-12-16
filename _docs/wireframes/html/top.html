@@ -13,15 +13,22 @@
   <!-- Header -->
   <header class="wf-header">
     <a href="top.html" class="wf-logo">LOGO</a>
+    <button class="wf-hamburger" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="wf-nav">
       <ul>
         <li><a href="guide.html">ご利用案内</a></li>
         <li><a href="work.html">お仕事内容</a></li>
         <li><a href="staff.html">スタッフ紹介</a></li>
         <li><a href="news.html">お知らせ</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
+    <div class="wf-nav-overlay"></div>
   </header>
 
   <!-- ========================================
@@ -79,7 +86,7 @@
     </p>
 
     <!-- 作業カード -->
-    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <div class="wf-work-cards" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
       <div style="width: 280px; background: #fff; border: 1px solid #ddd;">
         <div class="wf-placeholder" style="height: 160px;">写真：多肉植物</div>
         <p style="padding: 15px; text-align: center; font-weight: bold;">多肉植物の育成・販売</p>
@@ -190,7 +197,7 @@
        7. お知らせ
   ======================================== -->
   <section class="wf-section">
-    <div style="display: flex; gap: 40px; align-items: flex-start;">
+    <div class="wf-news-section" style="display: flex; gap: 40px; align-items: flex-start;">
       <div style="min-width: 150px;">
         <h2 class="wf-section-title" style="text-align: left; margin-bottom: 0;">お知らせ</h2>
         <p style="margin-top: 15px;"><a href="news.html" class="wf-btn" style="padding: 10px 20px; font-size: 12px;">一覧を見る</a></p>
@@ -234,7 +241,7 @@
       <a href="work.html">お仕事内容</a>
       <a href="staff.html">スタッフ紹介</a>
       <a href="news.html">お知らせ</a>
-      <a href="recruit.html">採用情報</a>
+      <a href="faq.html">よくある質問</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <!-- SNSリンク -->
@@ -255,11 +262,43 @@
         </svg>
       </a>
     </div>
-    <p style="font-size: 11px; color: #888; margin-bottom: 10px;"><a href="privacy.html" style="color: #888;">プライバシーポリシー</a></p>
+    <p style="font-size: 11px; color: #888; margin-bottom: 10px;"><a href="recruit.html" style="color: #888;">採用情報</a> ｜ <a href="privacy.html" style="color: #888;">プライバシーポリシー</a></p>
     <p class="wf-copyright">Copyright (C) 2024 Rapport. All Rights Reserved.</p>
   </footer>
 
 </div>
+
+<script>
+// Hamburger Menu
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.wf-hamburger');
+  const nav = document.querySelector('.wf-nav');
+  const overlay = document.querySelector('.wf-nav-overlay');
+
+  if (hamburger && nav && overlay) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  }
+});
+</script>
 
 </body>
 </html>
