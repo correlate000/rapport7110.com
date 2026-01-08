@@ -1,0 +1,83 @@
+<?php
+/**
+ * The template for displaying the footer
+ * Based on WF (Wireframe) structure
+ */
+?>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="<?php echo esc_url( home_url( '/guide/' ) ); ?>">ご利用案内</a>
+      <a href="<?php echo esc_url( home_url( '/work/' ) ); ?>">お仕事内容</a>
+      <a href="<?php echo esc_url( home_url( '/staff/' ) ); ?>">スタッフ紹介</a>
+      <a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">お知らせ</a>
+      <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">よくある質問</a>
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a>
+    </nav>
+
+    <!-- SNS Links -->
+    <div class="footer-sns">
+      <a href="#" title="Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+      <a href="#" title="YouTube">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+        </svg>
+      </a>
+      <a href="#" title="Webショップ">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+      </a>
+    </div>
+
+    <p class="footer-sub-nav">
+      <a href="<?php echo esc_url( home_url( '/business/' ) ); ?>">企業様へ</a> ｜
+      <a href="<?php echo esc_url( home_url( '/recruit/' ) ); ?>">採用情報</a> ｜
+      <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">プライバシーポリシー</a>
+    </p>
+    <p class="copyright">Copyright (C) <?php echo date('Y'); ?> Rapport. All Rights Reserved.</p>
+  </footer>
+
+</div><!-- /.site-container -->
+
+<script>
+// Hamburger Menu
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.site-nav');
+  const overlay = document.querySelector('.nav-overlay');
+
+  if (hamburger && nav && overlay) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  }
+});
+</script>
+
+<?php wp_footer(); ?>
+</body>
+</html>
