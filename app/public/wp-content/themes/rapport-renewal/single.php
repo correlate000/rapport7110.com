@@ -1,34 +1,35 @@
 <?php
 /**
  * The template for displaying single posts
- * Based on WF (Wireframe) structure
+ * WF Structure × Existing Design
  */
 
 get_header(); ?>
 
+<div class="wrap">
   <!-- Page Header -->
   <div class="page-header">
     <h1 class="page-title">お知らせ</h1>
   </div>
 
   <!-- Article Content -->
-  <section class="section">
-    <article class="post-content">
+  <div class="page-ctn">
+    <div class="page-inner">
       <?php while ( have_posts() ) : the_post(); ?>
 
-      <div class="post-header" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-        <p class="news-date" style="margin-bottom: 10px;"><?php the_time('Y.m.d'); ?></p>
-        <h2 style="font-size: 22px; font-weight: bold;"><?php the_title(); ?></h2>
+      <div class="article-header">
+        <p class="article-date"><?php the_time('Y.m.d'); ?></p>
+        <h2 class="article-title"><?php the_title(); ?></h2>
       </div>
 
-      <div class="post-body" style="font-size: 15px; line-height: 2;">
+      <div class="article-content">
         <?php the_content(); ?>
       </div>
 
       <?php endwhile; ?>
 
-      <!-- Pagination -->
-      <div class="post-nav" style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+      <!-- Post Navigation -->
+      <div class="post-nav">
         <?php if (get_previous_post()): ?>
           <div class="prev"><?php previous_post_link('%link', '← 前の記事'); ?></div>
         <?php else: ?>
@@ -45,7 +46,17 @@ get_header(); ?>
           <div></div>
         <?php endif; ?>
       </div>
-    </article>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <p class="cta-sub">まずは見学から始めてみませんか？</p>
+      <p class="cta-main">見学・体験は随時受付中</p>
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn">お問い合わせはこちら</a>
+    </div>
   </section>
+</div>
 
 <?php get_footer(); ?>

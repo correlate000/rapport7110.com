@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+/* ========================================
+   Page Base Styles
+   WF Structure × Existing Design
+======================================== */
+
+.wrap { padding-top: 80px; background: #fff url('/img/bg-page.jpg') no-repeat 50% 0; min-height: 100vh;}
+@media (max-width: 801px) {
+	.wrap { padding-top: 60px;}
+}
+
+/* Page Header */
+.page-header { padding: 60px 5% 40px; background: linear-gradient(135deg, #4484ce 0%, #5a9bd5 100%); text-align: center;}
+.page-header:after { content: ''; display: block; width: 80px; height: 4px; margin: 20px auto 0; background: #f1a04d; border-radius: 2px;}
+.page-title { color: #fff; font-size: 32px; font-weight: 700; letter-spacing: 0.1em;}
+@media (max-width: 641px) {
+	.page-header { padding: 40px 5% 30px;}
+	.page-title { font-size: 24px;}
+	.page-header:after { width: 60px; height: 3px; margin-top: 15px;}
+}
+
+/* Page Content Container */
+.page-ctn { width: 92%; max-width: 1000px; margin: 0 auto; padding: 60px 0 80px;}
+.page-inner { background: #fff; padding: 50px; border-radius: 10px; box-shadow: 0 2px 20px rgba(0,0,0,0.08);}
+@media (max-width: 801px) {
+	.page-ctn { width: 94%; padding: 40px 0 60px;}
+	.page-inner { padding: 30px 20px;}
+}
+
+
+/* ========================================
+   Section Styles
+======================================== */
+
+.section { padding: 60px 5%;}
+.section-gray { background: #f5f7fa;}
+.section-title { margin-bottom: 40px; font-size: 26px; font-weight: 700; text-align: center; color: #333;}
+.section-title:after { content: ''; display: block; width: 60px; height: 3px; margin: 15px auto 0; background: #4484ce;}
+.section-lead { margin-bottom: 40px; font-size: 15px; line-height: 2; text-align: center; color: #555;}
+
+@media (max-width: 641px) {
+	.section { padding: 40px 5%;}
+	.section-title { font-size: 20px; margin-bottom: 30px;}
+	.section-lead { font-size: 14px; margin-bottom: 30px;}
+}
+
+
+/* ========================================
+   Content Typography
+======================================== */
+
+.page-inner h2 { position: relative; margin: 40px 0 20px; padding-left: 20px; font-size: 22px; font-weight: 700; color: #4484ce;}
+.page-inner h2:first-child { margin-top: 0;}
+.page-inner h2:before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #4484ce; border-radius: 2px;}
+
+.page-inner h3 { margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #4484ce; font-size: 18px; font-weight: 700; color: #333;}
+
+.page-inner p { margin-bottom: 20px; font-size: 15px; line-height: 2; color: #333;}
+.page-inner p:last-child { margin-bottom: 0;}
+
+.page-inner ul, .page-inner ol { margin: 20px 0; padding-left: 25px;}
+.page-inner ul li, .page-inner ol li { margin-bottom: 10px; font-size: 15px; line-height: 1.8;}
+
+.page-inner a { color: #4484ce; text-decoration: underline;}
+.page-inner a:hover { color: #f1a04d;}
+
+@media (max-width: 641px) {
+	.page-inner h2 { font-size: 18px; margin: 30px 0 15px;}
+	.page-inner h3 { font-size: 16px;}
+	.page-inner p { font-size: 14px;}
+	.page-inner ul li, .page-inner ol li { font-size: 14px;}
+}
+
+
+/* ========================================
+   Feature Box Styles
+======================================== */
+
+.feature-box { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 40px 0;}
+.feature-item { background: #f5f7fa; padding: 30px 25px; width: calc((100% - 40px) / 3); min-width: 240px; border-radius: 10px; text-align: center;}
+.feature-icon { margin-bottom: 15px; color: #4484ce;}
+.feature-title { margin-bottom: 10px; font-size: 16px; font-weight: 700; color: #333;}
+.feature-text { font-size: 13px; line-height: 1.8; color: #666;}
+
+@media (max-width: 801px) {
+	.feature-item { width: calc((100% - 20px) / 2);}
+}
+@media (max-width: 641px) {
+	.feature-item { width: 100%;}
+}
+
+
+/* ========================================
+   Step/Flow Styles
+======================================== */
+
+.steps { max-width: 700px; margin: 0 auto;}
+.step-item { position: relative; padding: 30px 30px 30px 80px; background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 20px;}
+.step-item:last-child { margin-bottom: 0;}
+.step-num { position: absolute; left: 20px; top: 30px; width: 45px; height: 45px; background: #4484ce; border-radius: 50%;
+ color: #fff; font-size: 20px; font-weight: 700; line-height: 45px; text-align: center;
+}
+.step-title { margin-bottom: 10px; font-size: 18px; font-weight: 700; color: #333;}
+.step-text { font-size: 14px; line-height: 1.9; color: #555;}
+.step-note { margin-top: 10px; font-size: 12px; color: #888;}
+
+@media (max-width: 641px) {
+	.step-item { padding: 25px 20px 25px 70px;}
+	.step-num { left: 15px; top: 25px; width: 40px; height: 40px; font-size: 18px; line-height: 40px;}
+	.step-title { font-size: 16px;}
+	.step-text { font-size: 13px;}
+}
+
+
+/* ========================================
+   FAQ Styles
+======================================== */
+
+.faq-category { margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #4484ce; font-size: 18px; font-weight: 700; color: #4484ce;}
+.faq-category:first-child { margin-top: 0;}
+
+.faq-item { margin-bottom: 20px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;}
+.faq-q { padding: 20px 25px; background: #f5f7fa; font-size: 15px; font-weight: 700; color: #333; display: flex; align-items: flex-start; gap: 15px;}
+.faq-q span { flex-shrink: 0; width: 28px; height: 28px; background: #4484ce; border-radius: 50%;
+ color: #fff; font-size: 14px; font-weight: 700; line-height: 28px; text-align: center;
+}
+.faq-a { padding: 20px 25px 20px 68px; font-size: 14px; line-height: 1.9; color: #555;}
+.faq-a a { color: #4484ce; text-decoration: underline;}
+
+@media (max-width: 641px) {
+	.faq-q { padding: 15px 20px; font-size: 14px; gap: 12px;}
+	.faq-q span { width: 24px; height: 24px; font-size: 12px; line-height: 24px;}
+	.faq-a { padding: 15px 20px 15px 56px; font-size: 13px;}
+}
+
+
+/* ========================================
+   Staff Card Styles
+======================================== */
+
+.staff-card { display: flex; gap: 30px; align-items: flex-start; background: #fff; padding: 30px; border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 25px;}
+.staff-photo { width: 150px; height: 180px; flex-shrink: 0; background: #f0f0f0; border-radius: 8px;}
+.staff-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px;}
+.staff-info { flex: 1;}
+.staff-role { margin-bottom: 5px; font-size: 13px; color: #4484ce;}
+.staff-name { margin-bottom: 15px; font-size: 20px; font-weight: 700; color: #333;}
+.staff-detail dt { margin-top: 12px; font-size: 13px; font-weight: 700; color: #4484ce;}
+.staff-detail dd { margin-left: 0; font-size: 14px; line-height: 1.7; color: #555;}
+
+@media (max-width: 641px) {
+	.staff-card { flex-direction: column; padding: 20px; gap: 20px;}
+	.staff-photo { width: 120px; height: 150px;}
+	.staff-name { font-size: 18px;}
+}
+
+
+/* ========================================
+   Work Card Styles
+======================================== */
+
+.work-cards { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;}
+.work-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; width: calc((100% - 50px) / 2); max-width: 420px;}
+.work-card-img { height: 180px; background: #f0f0f0;}
+.work-card-img img { width: 100%; height: 100%; object-fit: cover;}
+.work-card-body { padding: 25px;}
+.work-card-title { margin-bottom: 10px; font-size: 18px; font-weight: 700; color: #333;}
+.work-card-text { font-size: 14px; line-height: 1.8; color: #666;}
+.work-card-link { margin-top: 15px;}
+.work-card-link a { font-size: 13px; color: #4484ce;}
+
+@media (max-width: 801px) {
+	.work-card { width: 100%;}
+}
+
+
+/* ========================================
+   Timeline/Schedule Styles
+======================================== */
+
+.timeline { max-width: 600px; margin: 0 auto;}
+.timeline-item { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px dotted #ccc;}
+.timeline-item:last-child { border-bottom: none;}
+.timeline-time { flex-shrink: 0; width: 60px; font-size: 18px; font-weight: 700; color: #4484ce;}
+.timeline-content { flex: 1; font-size: 14px; line-height: 1.8; color: #333;}
+.timeline-content strong { display: block; margin-bottom: 5px; font-size: 16px;}
+.timeline-content span { color: #666;}
+
+
+/* ========================================
+   Pricing Table Styles
+======================================== */
+
+.price-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 30px 0;}
+.price-table th, .price-table td { padding: 15px; border: 1px solid #ddd; text-align: left;}
+.price-table th { background: #f5f7fa; font-weight: 700; color: #333;}
+.price-table td { background: #fff;}
+.price-highlight { font-weight: 700; color: #4484ce;}
+
+
+/* ========================================
+   Info Box Styles
+======================================== */
+
+.info-box { padding: 25px; border-radius: 8px; margin: 30px 0;}
+.info-box-primary { background: #e8f4fd; border-left: 4px solid #4484ce;}
+.info-box-warning { background: #fff8e6; border-left: 4px solid #f0c040;}
+.info-box-success { background: #e8f5e9; border-left: 4px solid #4caf50;}
+
+.info-box p { margin: 0; font-size: 14px; line-height: 1.9;}
+.info-box strong { color: #333;}
+
+
+/* ========================================
+   CTA Section
+======================================== */
+
+.page-cta { padding: 80px 5%; background: linear-gradient(135deg, #4484ce 0%, #5a9bd5 100%); text-align: center;}
+.page-cta-inner { max-width: 600px; margin: 0 auto;}
+.cta-sub { margin-bottom: 10px; font-size: 15px; color: rgba(255,255,255,0.9);}
+.cta-main { margin-bottom: 25px; font-size: 28px; font-weight: 700; color: #fff;}
+.page-cta .btn { background: #f1a04d; border: none;}
+.page-cta .btn:hover { background: #e08f3c; opacity: 1;}
+
+@media (max-width: 641px) {
+	.page-cta { padding: 50px 5%;}
+	.cta-main { font-size: 22px;}
+}
+
+
+/* ========================================
+   News List (Archive)
+======================================== */
+
+.news-list { width: 100%; max-width: 800px; margin: 0 auto;}
+.news-list ul { border-top: 1px solid #e0e0e0;}
+.news-list li { display: flex; align-items: flex-start; gap: 20px; padding: 20px 10px; border-bottom: 1px solid #e0e0e0;}
+.news-list time { flex-shrink: 0; font-size: 14px; color: #888;}
+.news-list a { font-size: 15px; font-weight: 500; color: #333; text-decoration: none; line-height: 1.6;}
+.news-list a:hover { color: #4484ce;}
+
+@media (max-width: 641px) {
+	.news-list li { flex-direction: column; gap: 8px; padding: 15px 5px;}
+	.news-list time { font-size: 13px;}
+	.news-list a { font-size: 14px;}
+}
+
+
+/* ========================================
+   Pagination
+======================================== */
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 50px;}
+.pagination a, .pagination span { display: flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px;
+ font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 5px;
+}
+.pagination a { background: #f0f0f0; color: #333;}
+.pagination a:hover { background: #4484ce; color: #fff;}
+.pagination span.current { background: #4484ce; color: #fff;}
+
+@media (max-width: 641px) {
+	.pagination a, .pagination span { min-width: 36px; height: 36px; font-size: 13px;}
+}
+
+
+/* ========================================
+   Contact Form Styles
+======================================== */
+
+.contact-intro { padding: 30px; background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; margin-bottom: 40px; text-align: center;}
+.contact-intro p { margin-bottom: 15px; font-size: 15px;}
+.contact-intro .btn { background: #888;}
+
+.contact-tel-box { background: #fff; padding: 35px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 30px; text-align: center;}
+.contact-tel-label { margin-bottom: 10px; font-size: 14px; color: #666;}
+.contact-tel-number { margin-bottom: 10px; font-size: 32px; font-weight: 700;}
+.contact-tel-number a { color: #333; text-decoration: none;}
+.contact-tel-note { font-size: 12px; color: #888;}
+
+.contact-form { background: #fff; padding: 40px; border: 1px solid #ddd; border-radius: 10px;}
+.contact-form-title { margin-bottom: 25px; font-size: 16px; text-align: center; color: #333;}
+
+/* Contact Form 7 Override */
+.wpcf7 { max-width: 100%;}
+.wpcf7-form p { margin-bottom: 20px;}
+.wpcf7-form label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500;}
+.wpcf7-form .required { color: #c00; font-size: 11px; margin-left: 5px;}
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea,
+.wpcf7-form select { width: 100%; padding: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 15px; background: #fafafa;}
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus,
+.wpcf7-form select:focus { outline: none; border-color: #4484ce; background: #fff;}
+.wpcf7-form textarea { min-height: 150px; resize: vertical;}
+.wpcf7-form input[type="submit"] { display: block; width: 100%; max-width: 300px; margin: 30px auto 0; padding: 18px;
+ background: #f1a04d; border: none; border-radius: 50px; color: #fff; font-size: 16px; font-weight: 700; cursor: pointer;
+}
+.wpcf7-form input[type="submit"]:hover { background: #e08f3c;}
+
+@media (max-width: 641px) {
+	.contact-form { padding: 25px 20px;}
+	.contact-tel-number { font-size: 26px;}
+}
+
+
+/* ========================================
+   Single Post (Article) Styles
+======================================== */
+
+.article-header { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;}
+.article-date { margin-bottom: 10px; font-size: 14px; color: #888;}
+.article-title { font-size: 24px; font-weight: 700; line-height: 1.5; color: #333;}
+
+.article-content { font-size: 15px; line-height: 2; color: #333;}
+.article-content p { margin-bottom: 25px;}
+.article-content img { max-width: 100%; height: auto; margin: 30px 0;}
+
+.post-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;
+ margin-top: 50px; padding-top: 30px; border-top: 1px solid #e0e0e0;
+}
+.post-nav a { font-size: 14px; color: #4484ce; text-decoration: none;}
+.post-nav a:hover { text-decoration: underline;}
+.post-nav .back .btn { font-size: 14px; padding: 12px 30px;}
+
+@media (max-width: 641px) {
+	.article-title { font-size: 20px;}
+	.article-content { font-size: 14px;}
+}
+
+
+/* ========================================
+   Privacy Policy Styles
+======================================== */
+
+.privacy-section { margin-bottom: 40px;}
+.privacy-section:last-child { margin-bottom: 0;}
+.privacy-title { position: relative; margin-bottom: 15px; padding-left: 25px; font-size: 18px; font-weight: 700; color: #333;}
+.privacy-title:before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+ width: 16px; height: 16px; background: url('/img/ttl-mark.png') no-repeat center / contain;
+}
+.privacy-text { font-size: 14px; line-height: 2; color: #555;}
+
+
+/* ========================================
+   Thanks Page Styles
+======================================== */
+
+.thanks-content { text-align: center; padding: 60px 20px;}
+.thanks-icon { margin-bottom: 30px; color: #4484ce;}
+.thanks-title { margin-bottom: 20px; font-size: 24px; font-weight: 700; color: #333;}
+.thanks-text { margin-bottom: 30px; font-size: 15px; line-height: 2; color: #555;}
+.thanks-back { margin-top: 40px;}
+
+
+/* ========================================
+   Buttons (Page Context)
+======================================== */
+
+.btn { display: inline-block; padding: 15px 40px; background: #f1a04d; border-radius: 50px;
+ color: #fff; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; transition: 0.3s ease;
+}
+.btn:hover { opacity: 0.85; color: #fff;}
+.btn-secondary { background: #fff; color: #4484ce; border: 2px solid #4484ce;}
+.btn-secondary:hover { background: #4484ce; color: #fff; opacity: 1;}
+.btn-small { padding: 10px 25px; font-size: 13px;}
+.btn-large { padding: 18px 50px; font-size: 18px;}
+.btn-gray { background: #888;}
+.btn-gray:hover { background: #666;}
